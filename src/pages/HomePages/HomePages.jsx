@@ -2,6 +2,8 @@
 import Styles from './HomePages.module.css';
 import Header from '../../components/Header/Header';
 import Topo from '../../components/TopoComponent/Topo';
+import Pesquisa from '../../components/Pesquisa/Pesquisa';
+
 
 export default function HomePage() {
     
@@ -10,7 +12,7 @@ export default function HomePage() {
         <div className={Styles.HomePage}>
             <Header />
             <Topo />
-            <h1>Teste</h1>
+            <Pesquisa />
         </div>   
     )
 }
