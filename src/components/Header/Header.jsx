@@ -1,17 +1,21 @@
 import styles from "./Header.module.css"
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import { useLocation } from "react-router-dom";
+import Carrossel from "../Carrocel/Carrocel";
 
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const navigate = useNavigate();
 
 
   return (
     <>
       <header id="home" className={styles.container}>
-
+        {isHome && <Carrossel />}
         <button
           className={styles.iconButton}
           onClick={() => setOpen((s) => !s)}
